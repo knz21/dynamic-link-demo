@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">DynamicLinkDemo</string>
+    <string name="app_name">dynamic_link_demo</string>
+    <string name="no_deep_link">No deep link found.</string>
 </resources>

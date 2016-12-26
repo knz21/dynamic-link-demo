@@ -1,4 +1,4 @@
-package jp.wellnote.dynamiclinkdemo;
+package com.knz21.dynamic_link_demo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("jp.wellnote.dynamiclinkdemo", appContext.getPackageName());
+        assertEquals("com.knz21.dynamic_link_demo", appContext.getPackageName());
     }
 }

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
     defaultConfig {
-        applicationId "jp.wellnote.dynamiclinkdemo"
+        applicationId "com.knz21.dynamic_link_demo"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
@@ -28,5 +28,4 @@ dependencies {
     compile 'com.google.firebase:firebase-invites:9.6.1'
     testCompile 'junit:junit:4.12'
 }
-
 apply plugin: 'com.google.gms.google-services'

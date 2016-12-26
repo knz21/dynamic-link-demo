@@ -1,4 +1,4 @@
-package jp.wellnote.dynamiclinkdemo;
+package com.knz21.dynamic_link_demo;
 
 import org.junit.Test;
 

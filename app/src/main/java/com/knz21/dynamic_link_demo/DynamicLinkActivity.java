@@ -1,4 +1,4 @@
-package jp.wellnote.dynamiclinkdemo;
+package com.knz21.dynamic_link_demo;
 
 import android.content.Intent;
 import android.os.Bundle;

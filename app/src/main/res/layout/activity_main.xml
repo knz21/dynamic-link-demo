@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="jp.wellnote.dynamiclinkdemo.MainActivity">
+    tools:context="com.knz21.dynamic_link_demo.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,5 +19,6 @@
     <TextView
         android:id="@+id/text_deep_link"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="@string/no_deep_link"/>
 </LinearLayout>
