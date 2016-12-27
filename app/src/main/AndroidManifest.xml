@@ -14,9 +14,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
 
-        <activity android:name=".DynamicLinkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -28,6 +26,8 @@
                     android:scheme="https"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".DynamicLinkActivity"></activity>
     </application>
 
 </manifest>

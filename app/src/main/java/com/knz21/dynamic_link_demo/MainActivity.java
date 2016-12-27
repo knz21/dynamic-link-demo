@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).addApi(AppInvite.API).build();
 
+        Log.v(TAG, "onCreate");
         AppInvite.AppInviteApi.getInvitation(googleApiClient, this, false)
                 .setResultCallback(new ResultCallback<AppInviteInvitationResult>() {
                     @Override
