@@ -20,39 +20,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setDeepLink();
 
         GoogleApiClient googleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {
                     @Override
                     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
                     }
                 }).addApi(AppInvite.API).build();
 
-        Log.v(TAG, "onCreate");
         AppInvite.AppInviteApi.getInvitation(googleApiClient, this, false)
                 .setResultCallback(new ResultCallback<AppInviteInvitationResult>() {
                     @Override
                     public void onResult(@NonNull AppInviteInvitationResult result) {
-                        Log.v(TAG, "onResult");
                         if (result.getStatus().isSuccess()) {
-                            Log.v(TAG, "result is success");
-                            Intent intent = result.getInvitationIntent();
-                            String deepLink = AppInviteReferral.getDeepLink(intent);
+                            String deepLink = AppInviteReferral.getDeepLink(result.getInvitationIntent());
                             ((TextView) findViewById(R.id.text_deep_link)).setText(deepLink);
+                            Log.d(TAG, "deep link: " + deepLink);
+                        } else {
+                            Log.d(TAG, "no deep link");
                         }
                     }
                 });
-    }
-
-    private void setDeepLink() {
-        if (getIntent() != null) {
-            String deepLink = getIntent().getStringExtra("deep_link");
-            if (deepLink != null) {
-                Log.v(TAG, "setDeepLink from intent");
-                ((TextView) findViewById(R.id.text_deep_link)).setText(deepLink);
-            }
-        }
     }
 }

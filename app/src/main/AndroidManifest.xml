@@ -26,8 +26,6 @@
                     android:scheme="https"/>
             </intent-filter>
         </activity>
-
-        <activity android:name=".DynamicLinkActivity"></activity>
     </application>
 
 </manifest>
